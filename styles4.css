@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Navbar */
+.navbar {
+    background-color: #004d4d;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Poetsen One';
+    font-size: 20px;
+    display: flex;
+    justify-content: center; /* Centraliza os itens da navbar */
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza os itens de navegação */
+    flex-grow: 1; /* Faz com que a lista ocupe todo o espaço disponível */
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Adiciona transição suave para cor e borda */
+    border-bottom: 2px solid transparent; /* Linha invisível inicialmente */
+}
+
+.navbar ul li a:hover {
+    color: #000000;
+    border-bottom: 2px solid #000000; /* Mostra a linha ao passar o mouse */
+}
+
+/* Estilo específico para o item Portfolio */
+.navbar ul li.logo {
+    position: absolute; /* Coloca o logo à esquerda */
+    left: 20px; /* Ajusta o espaço à esquerda */
+}
+
+.navbar ul li.logo a {
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    color: #fff; /* Mantém a cor branca */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Adiciona o efeito hover */
+.navbar ul li.logo a:hover {
+    color: #000; /* Muda a cor para preto ao passar o mouse */
+}
+
+header {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Camada escura */
+        url('img/—Pngtree—website technology line dark background_2443641.png');
+    background-size: cover; /* Ajuste para cobrir toda a área */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+
+.text-section {
+    max-width: 50%;
+}
+
+.text-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Poetsen One';
+    border-bottom: 2px solid #008080; /* Linha debaixo do texto */
+    display: inline-block;           /* Ajusta a largura ao tamanho do texto */
+    padding-bottom: 5px;             /* Espaçamento entre o texto e a linha */
+    transition: color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.text-section h1:hover {
+    color: #008080; /* Altera a cor do texto no hover */
+    border-color: #008080; /* Altera a cor da linha no hover */
+}
+
+.container {
+    display: grid;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: start;      /* Alinha os itens ao topo */
+    height: auto;            /* Remove a altura fixa */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 10px;               /* Reduz o espaçamento entre os elementos internos */
+    margin-bottom: 240px;
+}
+
+.text-section {
+    margin-bottom: 5px; /* Reduz o espaço entre o título e os botões */
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column; /* Alinha os botões verticalmente */
+    gap: 20px; /* Espaçamento entre os botões */
+    align-items: center; /* Centraliza os botões horizontalmente */
+    margin-top: 0; /* Remove a margem superior */
+}
+
+.contact-buttons .btn {
+    display: flex; /* Para alinhar texto e ícone */
+    align-items: center; /* Centraliza o texto e o ícone verticalmente */
+    text-decoration: none; /* Remove o sublinhado */
+    background-color: #008080; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 18px 30px; /* Botões maiores */
+    font-size: 1.5rem; /* Texto maior */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave */
+    width: 250px; /* Largura fixa */
+    text-align: center; /* Alinha o texto no centro */
+    font-family: 'Poppins';
+    gap: 10px;
+}
+
+.contact-buttons .btn:hover {
+    background-color: #005050; /* Cor ao passar o mouse */
+}
+
+.contact-buttons .icon {
+    width: 30px; /* Tamanho do ícone */
+    height: 30px; /* Tamanho do ícone */
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+
+#moving-icon img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  #moving-icon img:hover {
+    transform: scale(1.2);
+  }
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  footer .social-icons {
+    margin-top: 10px;
+  }
+  
+  footer .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  
+  footer .social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  }
+  
+  footer .social-icons img:hover {
+    transform: scale(1.2);
+  }
+  
+/* Fonte */
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/font/OpenSans-Regular.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poetsen One';
+    src: url('/font/PoetsenOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('/font/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('/font/Poppins-Regular.ttf');
+}
+/* animações */
