@@ -206,4 +206,27 @@ footer {
     font-family: 'Poppins';
     src: url('font/Poppins-Regular.ttf');
 }
-/* animações */
+
+@media (max-width: 768px) {
+    .text-section {
+        max-width: 90%; /* Permitir que ocupe mais largura em telas menores */
+    }
+    .contact-buttons .btn {
+        width: 100%; /* Tornar os botões fluidos */
+        font-size: 1rem; /* Reduzir o tamanho da fonte */
+        padding: 10px; /* Ajustar o espaçamento interno */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: auto; /* Remover altura fixa */
+        padding: 20px; /* Adicionar espaçamento interno */
+    }
+    .text-section h1 {
+        font-size: 2rem; /* Reduzir tamanho do título */
+    }
+    .navbar ul {
+        flex-direction: column; /* Exibir itens em pilha */
+    }
+}
