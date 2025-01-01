@@ -326,4 +326,61 @@ footer {
     font-family: 'Poppins';
     src: url('font/Poppins-Regular.ttf');
 }
-/* animações */
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .projetos-container {
+        flex-direction: column; /* Coloca os projetos em uma coluna */
+        gap: 15px; /* Espaçamento entre os projetos */
+        align-items: center; /* Centraliza os projetos */
+    }
+
+    .projeto {
+        width: 90%; /* Reduz a largura do container */
+        padding: 10px; /* Reduz o espaçamento interno */
+    }
+
+    .image-section {
+        order: 2; /* Reposiciona a imagem para a última fileira */
+        text-align: center; /* Centraliza a imagem */
+    }
+
+    .image-section img {
+        max-width: 200px; /* Ajusta o tamanho da imagem */
+        margin-top: 20px; /* Adiciona espaçamento acima da imagem */
+    }
+}
+
+@media (max-width: 480px) {
+    .projetos-container {
+        gap: 10px; /* Menor espaçamento entre os projetos */
+    }
+
+    .projeto {
+        width: 100%; /* O container ocupa toda a largura da tela */
+        padding: 8px; /* Espaçamento interno reduzido */
+    }
+
+    .image-section img {
+        max-width: 150px; /* Reduz ainda mais o tamanho da imagem */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Menu em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .navbar ul li {
+        margin: 8px 0; /* Espaçamento menor entre itens */
+    }
+}
+@media (max-width: 768px) {
+    .image-section {
+        display: none; /* Esconde a seção de imagem em telas menores */
+    }
+}
+@media (max-width: 768px) {
+    .icons img {
+        display: none; /* Esconde apenas as imagens dos ícones */
+    }
+}
