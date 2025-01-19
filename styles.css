@@ -5,15 +5,16 @@ body {
 /* Navbar */
 .navbar {
     background-color: #004d4d;
-    padding: 10px;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    font-family: 'Poetsen One';
-    font-size: 20px;
     display: flex;
-    justify-content: center; /* Centraliza os itens da navbar */
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite ajustes para telas menores */
+    font-family: 'Poppins';
+    font-size: 20px;
 }
 
 .navbar ul {
@@ -21,26 +22,34 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centraliza os itens de navegação */
-    flex-grow: 1; /* Faz com que a lista ocupe todo o espaço disponível */
+    flex-wrap: wrap; /* Garante que os itens se ajustem em telas menores */
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espaçamento consistente entre os itens */
+    flex-grow: 1; /* Faz os itens ocuparem o espaço restante */
+    font-family: 'Poetsen One';
 }
 
-.navbar ul li {
-    margin: 0 15px;
+.navbar ul li.logo {
+    margin-right: auto; /* Posiciona o logo à esquerda */
+    order: -1; /* Mantém o logo como o primeiro item no layout */
 }
 
 .navbar ul li a {
-    color: #fff;
+    color: #fff; /* Mantém o texto branco */
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease, border-bottom 0.3s ease; /* Adiciona transição suave para cor e borda */
-    border-bottom: 2px solid transparent; /* Linha invisível inicialmente */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+    padding: 5px 10px; /* Espaçamento interno para melhorar a área de clique */
 }
 
 .navbar ul li a:hover {
     color: #000000;
-    border-bottom: 2px solid #000000; /* Mostra a linha ao passar o mouse */
+    border-bottom: 2px solid #000000;
 }
+
 
 /* Estilo específico para o item Portfolio */
 .navbar ul li.logo {
@@ -133,11 +142,12 @@ header {
 
 
 .image-section img {
-    max-width: 300px;
+    max-width: 270px;
     border-radius: 10px;
     border-style: solid;
     border-color: #ffffff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 20px;
 }
 
 .image-section img:hover {
@@ -152,6 +162,7 @@ header {
     text-decoration: none; /* Remove o sublinhado padrão do link */
     transition: color 0.3s ease, text-shadow 0.3s ease;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .name:hover {
@@ -207,8 +218,8 @@ footer {
   }
   
   footer .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     transition: transform 0.3s;
   }
   
@@ -235,4 +246,80 @@ footer {
     font-family: 'Poppins';
     src: url('/font/Poppins-Regular.ttf');
 }
-/* animações */
+/* Adicionando responsividade */
+@media (max-width: 768px) {
+    /* Ajustes gerais para telas médias */
+    .navbar ul {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .text-section h1 {
+        font-size: 2rem;
+    }
+
+    .text-section p {
+        font-size: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .image-section img {
+        max-width: 80%; /* Limita o tamanho da imagem */
+        height: auto;
+    }
+
+    .icons-container {
+        gap: 8px; /* Reduz o espaçamento entre os ícones */
+    }
+
+    .icons img {
+        width: 36px; /* Reduz o tamanho dos ícones */
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para telas pequenas */
+    .navbar ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    header {
+        padding: 20px;
+        height: auto;
+        text-align: center;
+    }
+
+    .text-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-section p {
+        font-size: 0.9rem;
+    }
+
+    .image-section img {
+        max-width: 70%; /* Reduz ainda mais o tamanho da imagem */
+    }
+
+    .icons img {
+        width: 32px; /* Reduz o tamanho dos ícones */
+        height: 32px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+
+  
+  
+  

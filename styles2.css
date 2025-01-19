@@ -131,7 +131,7 @@ header {
 
 
 .image-section img {
-    max-width: 300px;
+    max-width: 270px;
     border-radius: 10px;
     border-style: solid;
     border-color: #ffffff;
@@ -205,8 +205,8 @@ footer {
   }
   
   footer .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     transition: transform 0.3s;
   }
   
@@ -233,4 +233,84 @@ footer {
     font-family: 'Poppins';
     src: url('/font/Poppins-Regular.ttf');
 }
-/* animações */
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Muda a direção para coluna em telas pequenas */
+        padding: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Itens de navegação em coluna */
+        gap: 10px;
+    }
+
+    .navbar ul li.logo {
+        position: relative; /* Redefine a posição para alinhamento */
+        left: 0;
+        margin-bottom: 10px;
+    }
+
+    header {
+        height: auto; /* Ajusta a altura para caber o conteúdo */
+        padding: 20px;
+    }
+
+    .text-section h1 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    .text-section p {
+        font-size: 16px; /* Ajusta o tamanho do texto */
+    }
+
+    .container {
+        flex-direction: column; /* Empilha os itens */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .image-section img {
+        max-width: 200px; /* Reduz o tamanho da imagem */
+    }
+
+    .icons-container {
+        flex-wrap: wrap; /* Permite quebra de linha para os ícones */
+    }
+
+    .icons img {
+        width: 36px; /* Reduz o tamanho dos ícones */
+        height: 36px;
+    }
+
+    footer {
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+    }
+
+    footer .social-icons img {
+        width: 20px; /* Reduz o tamanho dos ícones sociais */
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar ul {
+        gap: 5px; /* Reduz o espaçamento entre itens */
+    }
+
+    .text-section h1 {
+        font-size: 1.5rem; /* Reduz ainda mais o título */
+    }
+
+    .text-section p {
+        font-size: 14px; /* Reduz o tamanho do texto */
+    }
+
+    .image-section img {
+        max-width: 150px; /* Reduz ainda mais o tamanho da imagem */
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+

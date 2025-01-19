@@ -78,6 +78,7 @@ header {
 
 .text-section {
     max-width: 50%;
+    text-align: center;
 }
 
 .text-section h1 {
@@ -89,6 +90,7 @@ header {
     padding-bottom: 5px;             /* Espaçamento entre o texto e a linha */
     transition: color 0.3s ease, border-color 0.3s ease;
     cursor: pointer;
+    margin-left: 50px;
 }
 
 .text-section h1:hover {
@@ -126,7 +128,7 @@ header {
     text-decoration: none; /* Remove o sublinhado */
     background-color: #008080; /* Cor de fundo */
     color: white; /* Cor do texto */
-    padding: 18px 30px; /* Botões maiores */
+    padding: 18px 25px; /* Botões maiores */
     font-size: 1.5rem; /* Texto maior */
     border-radius: 10px; /* Bordas arredondadas */
     transition: background-color 0.3s ease; /* Transição suave */
@@ -141,8 +143,8 @@ header {
 }
 
 .contact-buttons .icon {
-    width: 30px; /* Tamanho do ícone */
-    height: 30px; /* Tamanho do ícone */
+    width: 40px; /* Tamanho do ícone */
+    height: 40px; /* Tamanho do ícone */
     margin-right: 10px; /* Espaçamento entre o ícone e o texto */
 }
 
@@ -178,8 +180,8 @@ footer {
   }
   
   footer .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     transition: transform 0.3s;
   }
   
@@ -206,4 +208,39 @@ footer {
     font-family: 'Poppins';
     src: url('/font/Poppins-Regular.ttf');
 }
-/* animações */
+
+@media (max-width: 768px) {
+    .text-section {
+        max-width: 90%; /* Permitir que ocupe mais largura em telas menores */
+    }
+    .contact-buttons .btn {
+        width: 100%; /* Tornar os botões fluidos */
+        font-size: 1rem; /* Reduzir o tamanho da fonte */
+        padding: 10px; /* Ajustar o espaçamento interno */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: auto; /* Remover altura fixa */
+        padding: 20px; /* Adicionar espaçamento interno */
+    }
+    .text-section h1 {
+        font-size: 2rem; /* Reduzir tamanho do título */
+    }
+    .navbar ul {
+        flex-direction: column; /* Exibir itens em pilha */
+    }
+}
+/* Navbar responsiva */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Transforma o menu em uma coluna */
+        align-items: center; /* Centraliza os itens do menu */
+        gap: 10px; /* Espaçamento entre os links do menu */
+    }
+
+    .navbar ul li {
+        margin: 5px 0; /* Espaçamento entre itens do menu */
+    }
+}

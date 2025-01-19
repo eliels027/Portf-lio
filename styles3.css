@@ -183,48 +183,8 @@ header {
     color: #000000;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .projeto {
-        width: 40%; /* Ocupa 40% em telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .projeto {
-        width: 90%; /* Ocupa quase toda a largura em telas muito pequenas */
-    }
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .projeto {
-        width: 40%; /* Ocupa 40% em telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .projeto {
-        width: 90%; /* Ocupa quase toda a largura em telas muito pequenas */
-    }
-}
-
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .projeto {
-        width: 40%; /* Ocupa 40% em telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .projeto {
-        width: 90%; /* Ocupa quase toda a largura em telas muito pequenas */
-    }
-}
-
 .image-section img {
-    max-width: 300px;
+    max-width: 270px;
     border-radius: 10px;
     border-style: solid;
     border-color: #ffffff;
@@ -298,8 +258,8 @@ footer {
   }
   
   footer .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     transition: transform 0.3s;
   }
   
@@ -326,4 +286,72 @@ footer {
     font-family: 'Poppins';
     src: url('/font/Poppins-Regular.ttf');
 }
-/* animações */
+
+/* Ajustes de responsividade */
+/* Ajustes para dispositivos médios (tablets) */
+@media (max-width: 768px) {
+    .projetos-container {
+        flex-direction: column; /* Exibe os projetos em uma coluna */
+        gap: 15px; /* Espaçamento menor entre os projetos */
+        align-items: center; /* Centraliza os projetos */
+    }
+
+    .projeto {
+        width: 80%; /* Reduz a largura dos projetos */
+        padding: 10px; /* Reduz o espaçamento interno */
+        font-size: 0.9rem; /* Ajusta o tamanho do texto */
+    }
+}
+
+/* Ajustes para dispositivos pequenos (smartphones) */
+@media (max-width: 480px) {
+    .projetos-container {
+        gap: 10px; /* Reduz ainda mais o espaçamento */
+    }
+
+    .projeto {
+        width: 95%; /* Quase toda a largura da tela */
+        padding: 8px; /* Reduz o espaçamento interno */
+        font-size: 0.8rem; /* Texto menor para caber bem */
+    }
+
+    .projeto h3 {
+        font-size: 1rem; /* Ajusta o tamanho do título */
+    }
+
+    .projeto p {
+        font-size: 0.8rem; /* Texto mais compacto */
+    }
+
+    .projeto a {
+        font-size: 0.8rem; /* Botão mais compacto */
+        padding: 6px 10px; /* Menor espaçamento do botão */
+    }
+}
+
+/* Ajustes para imagens */
+@media (max-width: 480px) {
+    .image-section img {
+        max-width: 140px; /* Reduz o tamanho da imagem ainda mais */
+    }
+
+    .icons img {
+        display: none; /* Esconde os ícones em telas muito pequenas */
+    }
+}
+
+/* Navbar responsiva */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Transforma o menu em uma coluna */
+        align-items: center; /* Centraliza os itens do menu */
+        gap: 10px; /* Espaçamento entre os links do menu */
+    }
+
+    .navbar ul li {
+        margin: 5px 0; /* Espaçamento entre itens do menu */
+    }
+}
+
+
+
