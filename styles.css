@@ -236,15 +236,15 @@ footer {
 }
 @font-face {
     font-family: 'Poetsen One';
-    src: url('/font/PoetsenOne-Regular.ttf');
+    src: url('font/PoetsenOne-Regular.ttf');
 }
 @font-face {
     font-family: 'Roboto';
-    src: url('/font/Roboto-Regular.ttf');
+    src: url('font/Roboto-Regular.ttf');
 }
 @font-face {
     font-family: 'Poppins';
-    src: url('/font/Poppins-Regular.ttf');
+    src: url('font/Poppins-Regular.ttf');
 }
 /* Adicionando responsividade */
 @media (max-width: 768px) {
